@@ -74,8 +74,5 @@ test('Save and Validate', async ({page})=>{
     const message = await _pimpage.saveEmployee();//Click on Save button
     await expect(parseInt(_pimpage.employeeId)).toBeGreaterThan(0);
     await expect(message).toContain('Successfully Saved');
-    //Search the employee by ID
-    //const id = await _pimpage.searchEmployee();
-    //await expect(parseInt(id)).toBe(parseInt(_pimpage.employeeId));
 });
 
