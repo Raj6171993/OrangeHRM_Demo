@@ -6,7 +6,7 @@ const inValidData = JSON.parse(JSON.stringify(require('../Utils/inValidTestData.
 //test.describe.configure({mode : 'parallel'});//Running tests in Parallel mode
 test.describe('1 tests', () => {
     test('Valid Login', async ({ page }) => {
-        console.log('Welcome');
+    
         //Initializing object for pageManager
         const _pageManager = new pageManager(page);
         //Accessing Login class
