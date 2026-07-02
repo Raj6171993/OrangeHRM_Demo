@@ -33,6 +33,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
     browserName : 'chromium',
     screenshot : 'only-on-failure',
+    retries : 2,
   },
 
   /* Configure projects for major browsers */

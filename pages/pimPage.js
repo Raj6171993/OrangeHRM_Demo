@@ -22,6 +22,7 @@ class pimPage{
         this.deteleBtn = this.firstRow.locator('.bi-trash');
         this.deletePopup = this.page.locator('.oxd-sheet');
         this.confirmDelbtn = this.deletePopup.getByRole('button', {name : ' Yes, Delete '});
+        this.uniqueEmployeeId = Math.floor(100000 + Math.random() * 900000).toString();
     }
 
     async navigateToPIMPage(){
@@ -41,6 +42,8 @@ class pimPage{
         await this.firstNameInput.fill(firstName);
         await this.middleNameInput.fill(middleName);
         await this.lastNameInput.fill(lastName);
+        await this.employeeIdInput.clear();
+        await this.employeeIdInput.fill(this.uniqueEmployeeId);
     }
 
     async uploadPhoto(){
