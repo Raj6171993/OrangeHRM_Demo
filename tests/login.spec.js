@@ -4,7 +4,7 @@ const validData = JSON.parse(JSON.stringify(require('../Utils/validLoginTestData
 const inValidData = JSON.parse(JSON.stringify(require('../Utils/inValidTestData.json')));
 
 //test.describe.configure({mode : 'parallel'});//Running tests in Parallel mode
-test.describe('1 tests', () => {
+test.describe('1 test', () => {
     test('Valid Login', async ({ page }) => {
     
         //Initializing object for pageManager
@@ -38,7 +38,7 @@ test.describe('1 tests', () => {
     });
 });
 
-test.describe.parallel('2 tests', () => {
+test.describe('2 tests', () => {
     for (const data of inValidData) {
         test(`Invalid Login with ${data.TestData}`, async ({ page }) => {
 
